@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>Client</title>
+
+	<!-- Bootstrap core CSS -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<div id="message">
+		Регистрация прошла успешно
+	</div>
+
+	<div id="login-wrapper">
+		<div id="login-block">
+			<div id="login-invalid" style="color: red; margin-bottom: 15px; font-size: 17px"></div>
+			<div style="font-size: 36px; margin-bottom: 50px;">Login</div>
+
+			<div style="position: absolute;right: 30px;top: 0px;font-size: 36px; cursor: pointer; color: #636363;" id="login_close" onclick="loginShow('close');">x</div>
+
+			<div style="display: flex;">
+				<div style="margin-right: 45px;">
+					<div style="font-size: 20px; margin-top: 3px;">Lastname</div>
+					<div style="font-size: 20px; margin-top: 15px;">Registration Code</div>
+				</div>
+
+				<div>
+					<input id="lastname" class="form-control" placeholder="Lastname">
+					<input id="registration_code" type="password" class="form-control" placeholder="Code" style="margin-top: 10px;">
+
+					<button class="btn btn-primary login-btn" id="login" style="margin-top: 35px">Login</button>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	
+	<div id="main-container">
+        <div id="header" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <h1 class="h2" id="go-main" style="cursor: pointer;">Event Booking Platform</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group">
+                	<div style="display: flex; justify-content: center; align-items: center;">
+                		<div id="user-name" style="font-size: 20px; margin-right: 35px;"></div>
+                		<button id="login_btn" class="btn btn-primary login-btn" onclick="loginShow('show');">Login</button>
+                		<button id="logout_btn" class="btn btn-primary login-btn" style="display: none; background: #ffc107; border-color: #ffc107;">Logout</button>
+                	</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-area">
+            <div id="events-list"></div>
+
+
+            <div id="detail-block">
+            	<div id="detail-head">
+            		<div class="h4" id="detail-name"></div>
+
+            		<div>
+            			<button class="btn btn-outline-secondary" id="register">Register for this event</button>
+            			<div style="color: green; font-size: 25px; display: none;" id="registered_text">Registered</div>
+            		</div>
+            		
+            	</div>
+
+            	<div id="table-container">
+	            	<table id="sessions-table" class=" table-striped">
+	            		<thead>
+	            			<tr>
+	            				<th style="min-width: 130px;"></th>
+	            				<th style="min-width: 100px;"></th>
+	            				<th style="position: relative; width: 1000px; height: 25px; color: #808080; padding-left:">
+	            					<div id="time9">9:00</div>
+	            					<div id="time11">11:00</div>
+	            					<div id="time13">13:00</div>
+	            					<div id="time15">15:00</div>
+	            					<div id="time17">17:00</div>
+	            				</th>
+	            			</tr>
+	            		</thead>
+	            		<tbody id="sessions-body">
+	            			
+	            		</tbody>
+	            	</table>
+	            </div>
+
+
+	            <div id="register-block">
+        			<div id="register-title"></div>
+        			<div id="register-tickets"></div>
+        			<div id="register-workshops">
+        				<span>Select additional workshops you want to book:</span>
+        				<div id="workshops-insert"></div>
+        			</div>
+
+        			<div style="position: absolute;right: 25px;top: 0px;font-size: 36px; cursor: pointer;color: #636363;" id="register-close">x</div>
+
+        			<div style="margin-top: 0px; float: right; font-size: 19px;">
+        				<div id="register-cost">
+        					<div>
+        						<span>Event ticket:</span>
+        						<span id="ticket-cost" style="float: right; margin-left: 25px;">0</span>
+        					</div>
+        					<div>
+        						<span>Additional workshops:</span>
+        						<span id="workshops-cost" style="float: right; margin-left: 25px;">0</span>
+        					</div>
+        					<div style="width: 110%; margin: 8px 0 5px -5%; height: 1px;background: #000;"></div>
+        					<div>
+        						<span style="font-weight: bold;">Total:</span>
+        						<span id="total-cost" style="float: right; margin-left: 25px; font-weight: bold;">0</span>
+        					</div>
+        				</div>
+
+        				<button disabled="true" class="btn btn-primary login-btn" id="purchase" style="margin-top: 30px; float: right; background: #48c248; border-color: #48c248;">Purchase</button>
+        			</div>
+        		</div>
+
+
+
+	            <div id="session-detail">
+	            	<div style="position: absolute;right: 30px;top: 0px;font-size: 36px; cursor: pointer;" id="session_close">x</div>
+	            	<div id="session-title"></div>
+	            	<div id="session-description"></div>
+	            	<div id="session-info">
+	            		<span style="margin-right: 15px; font-size: 17px; font-weight: bold; color: #7226ed;">
+	            			Speaker:<br>
+	            			Start:<br>
+	            			End:<br>
+	            			Type:<br>
+	            			Cost:<br>
+	            		</span>
+	            		<span id="session-info-insert"></span>
+	            	</div>
+	            </div>
+            </div>
+        </div>
+
+    </div>
+ 
+
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+body {
+  background: #edf5f7;
+}
+#main-container {
+  width: 90%;
+  height: 100%;
+  margin: auto auto;
+}
+#header {
+  border-bottom: 1px solid #636363;
+}
+#content-area {
+  min-height: 80vh;
+  padding: 25px 10px;
+  margin-top: 30px;
+}
+.login-btn {
+  padding: 5px 40px;
+}
+#events-list {
+}
+.event {
+  color: #007bff;
+}
+.card {
+  transition: transform 0.4s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+#detail-block {
+  position: relative;
+  padding: 40px;
+  width: ;
+  display: none;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+#detail-name {
+  color: #007bff;
+}
+#table-container {
+  margin-top: 70px;
+  width: ;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+#sessions-table {
+  width: 1300px;
+}
+#sessions-table td {
+  border: 1px solid #007bff;
+  padding: 10px;
+}
+#detail-head {
+  display: flex;
+  justify-content: space-between;
+}
+#time9 {
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+#time11 {
+  position: absolute;
+  left: 250px;
+  top: 0;
+}
+#time13 {
+  position: absolute;
+  left: 490px;
+  top: 0;
+}
+#time15 {
+  position: absolute;
+  left: 730px;
+  top: 0;
+}
+#time17 {
+  position: absolute;
+  left: 970px;
+  top: 0;
+}
+.channel_name,
+.rooms_name {
+  font-size: 15px;
+}
+.rooms_name > div {
+  margin-bottom: 10px;
+}
+.session {
+  border: 2px solid;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  height: 25px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.session.registered {
+  border-color: #2de627;
+}
+.session-div {
+  position: relative;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+#session-detail {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 2%;
+  width: 96%;
+  background: #fff;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  margin-bottom: 70px;
+}
+#session-title {
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #7226ed;
+}
+#session-description {
+  font-size: 18px;
+}
+#session-info {
+  display: flex;
+  margin-top: 30px;
+}
+#session-info-insert {
+  font-size: 17px;
+}
+
+#login-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#login-block {
+  padding: 50px 100px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+#register-block {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 2%;
+  width: 96%;
+  background: #fff;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  margin-bottom: 50px;
+}
+#register-title {
+  font-size: 28px;
+}
+#register-tickets {
+  margin-top: 30px;
+  display: flex;
+}
+#register-workshops {
+  font-size: 19px;
+  margin-top: 30px;
+}
+
+.ticket {
+  border: 2px solid;
+  height: 100px;
+  width: 300px;
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.ticket > input {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.ticket.unavailable {
+  opacity: 0.4;
+  cursor: default;
+}
+.ticket.unavailable > input {
+  opacity: 1;
+  cursor: default;
+}
+
+#workshops-insert {
+  margin-top: 15px;
+}
+#workshops-insert input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+#message {
+  display: block;
+  position: fixed;
+  top: -250px;
+  padding: 50px;
+  width: 40%;
+  left: 30%;
+  background: #48c248;
+  color: #fff;
+  font-size: 28px;
+  z-index: 30;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  transition: opacity 1s;
+  transition-delay: 2.5s;
+  border-radius: 4px;
+  opacity: 1;
+}
